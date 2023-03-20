@@ -1,0 +1,46 @@
+﻿@model SanPham
+<form method="post" asp-action="Delete">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Xoa San Pham</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="MaSP"></label>
+            <input asp-for=MaSP disabled class="form-control" />
+            <span asp-validation-for="MaSP" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="TenSP"></label>
+            <input asp-for=TenSP disabled class="form-control" />
+            <span asp-validation-for="TenSP" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="LoaiSP"></label>
+            <input asp-for=LoaiSP disabled class="form-control" />
+            <span asp-validation-for="LoaiSP" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="MoTa"></label>
+            <input asp-for=MoTa disabled class="form-control" />
+            <span asp-validation-for="MoTa" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="SoLuongSP"></label>
+            <input asp-for=SoLuongSP disabled class="form-control" />
+            <span asp-validation-for="SoLuongSP" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="GiaSP"></label>
+            <input asp-for=GiaSP disabled class="form-control" />
+            <span asp-validation-for="GiaSP" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DvtID"></label>
+            <input asp-for=DvtID disabled class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-danger" style="width:150px">Xoa SanPham</button>
+        <a asp-controller="SanPham" asp-action="Index" class="btn btn-secondary" style="width:150px">Quay Lai</a>
+    </div>
+</form>

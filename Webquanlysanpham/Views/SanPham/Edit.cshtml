@@ -1,0 +1,81 @@
+﻿@model Webquanlysanpham.Models.SanPham
+@{
+    ViewBag.Title = "Edit";
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="row">
+    <div class="col-6">
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaSP, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.MaSP,  new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.MaSP, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TenSP, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.TenSP,  new { @class = "form-control"  })
+                    @Html.ValidationMessageFor(model => model.TenSP, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LoaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.LoaiSP, new { @class = "form-control" } )
+                    @Html.ValidationMessageFor(model => model.LoaiSP, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MoTa, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.MoTa, new { @class = "form-control" } )
+                    @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SoLuongSP, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.SoLuongSP, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.SoLuongSP, "", new { @class = "text-danger" })
+                </div>
+            </div>
+                        <div class="form-group">
+                @Html.LabelFor(model => model.GiaSP, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.GiaSP, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.GiaSP, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DvtID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.DvtID, (SelectList)ViewBag.Listdonvitinh, new { @class = "form-control"  })
+                    @Html.ValidationMessageFor(model => model.DvtID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10 form-button">
+                    <input type="submit" value="Edit" class="btn btn-primary btn-user btn-block" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    <a asp-controller="SanPham" asp-action="Index" class="btn btn-secondary" style="width:150px">Quay Lai</a>
+</div>

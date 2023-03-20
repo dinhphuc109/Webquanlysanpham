@@ -1,0 +1,21 @@
+﻿@model DonViTinh
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Sua DVT</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="MaDVT"></label>
+            <input asp-for=MaDVT class="form-control" />
+            <span asp-validation-for="MaDVT" class="text-danger"></span>
+        </div>
+                <div class="mb-3">
+            <label asp-for="DVTinh"></label>
+            <input asp-for=DVTinh class="form-control" />
+            <span asp-validation-for="DVTinh" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Sua DVT</button>
+        <a asp-controller="DonViTinh" asp-action="Index" class="btn btn-secondary" style="width:150px">Quay Lai</a>
+    </div>
+</form>
